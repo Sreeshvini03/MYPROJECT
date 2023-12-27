@@ -1,7 +1,7 @@
 const { string } = require("joi");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const passportLocalMongoose = require("passport-local-Mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new Schema({
     //we can create any no. of feilds like email,name..
