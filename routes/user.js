@@ -15,7 +15,9 @@ router.route("/login")
 .post(saveRedirectUrl,passport.authenticate("local",{failureRedirect:'/login',failureFlash : true}),userController.login)
 
 //passsport.authenticate is used as  route middleware to authenticate requests
-
+router.get("/",(req,res) => {
+    res.redirect("/listings");
+});
 
 router.get("/logout",userController.logout);
 
