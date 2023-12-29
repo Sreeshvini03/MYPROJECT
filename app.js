@@ -85,7 +85,7 @@ app.use((req,res,next) => {
 //common paths
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
-app.use("/",listingRouter);
+app.use("/",userRouter);
 
 app.all("*" ,(req,res,next) =>{
     next(new ExpressError(404,"Page not found!"));
